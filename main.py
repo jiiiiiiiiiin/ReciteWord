@@ -30,6 +30,7 @@ class ReciteWord:
         self.template.addAction("我记住了。")
         self.template.addAction("没记住。")
         self.template.setAudio(zroya.AudioMode.Silence)
+        self.i = 0
 
     def get_one_word(self):
         print('start query')
@@ -53,6 +54,10 @@ if __name__ == '__main__':
 
     def action(nid, action_id):
         global is_click
+        if action_id:
+            print("没记住")
+        else:
+            print("记住")
         is_click = True
 
 
@@ -62,6 +67,6 @@ if __name__ == '__main__':
         if is_click:
             r.get_one_word()
             is_click = False
-            time.sleep(0.1)
+            # time.sleep(0.1)
             zroya.show(r.template, on_action=action, on_click=action)
 

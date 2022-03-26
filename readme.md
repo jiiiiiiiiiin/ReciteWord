@@ -6,6 +6,8 @@
 
 之前在某音看到过利用通知进行背单词的视频，然后就复刻了一个。
 
+找到了原作者了，[ToastFish](https://github.com/Uahh/ToastFish)
+
 还没写完哦。
 
 1. 安装。
